@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .container_col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {   /* Same as above, needs changed and portioned out. */
+    display: flex;
+    justify-content: center;
+    
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;   /* Literally no idea whats causing a 40px left padding. Maybe I'll find it one day. */
+    gap:2px;   /* Adjust for gap between images. */
+  }
+  li {
+    height: 32vh;   /* Change this to adjust image height. */
+    flex-grow: 1;
+    list-style: none;
+  }
+  img { /* Use JS later to have these be expandable */
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  li:last-child {   /* This keeps the last image from freaking out. */
+    flex-grow: 10;
+  }
+  a {
+    color: inherit;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    text-decoration: none;
+  }
+  #long a:hover {
+    box-shadow: inset 250px 0 0 0 #ffffff;
+    color: rgb(0, 0, 0); 
+  }
+  #short a:hover {
+    box-shadow: inset 100px 0 0 0 #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  body{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 16%, rgba(18,18,18,1) 50%, rgba(0,0,0,1) 86%);
+    font-family: "Markazi Text", serif;
+    color:rgb(255, 255, 255);
+  }
